@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //런타임 이전에 선언 단계가 실행 된다. 아직 변수가 초기화 되지 않음
+      // 초기화 이전의 일시적 사각지대에서는 변수를 참조할수없다.
+      console.log(foo); // reference Error
+
+      // 변수 선언문에서 초기화 단계가 실행된다.
+      let foo;
+      console.log(foo); //reference Error
+
+      // 할당단계가 시작
+      foo = 1;
+      console.log(foo); // 1
+    </script>
+  </body>
+</html>
